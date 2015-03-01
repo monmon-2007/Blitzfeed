@@ -132,6 +132,14 @@
 			timer = setInterval(function(){displayArticle()}, milliseconds);
 		};
 		
+		// function to save the words after each click
+			var str=new Array();
+			function saveInArray()
+			{
+					var untranslated = articleArray[index - 1];
+					str.push(untranslated);
+					appendTable();
+			}
 		//Append table.
 		function appendTable(){
 			var table = document.getElementById("brotable");
@@ -139,10 +147,11 @@
 			
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(1);
-			
-			var untranslated = articleArray[index - 1];
+
 			cell1.innerHTML = untranslated;
+			cell2.innerHTML = translate();
 			};
+			
 
         // Translate Word 
         function translate(){ 
@@ -158,7 +167,7 @@
 		</br></br></br></br></br></br>
 		
 		<div id = "dict">
-			<button id = "addButton" onClick = "appendTable();translate();" name = "upward">Add</button>
+			<button id = "addButton" onClick = "saveInArray();" name = "upward">Add</button>
 			<table id = 'brotable'></table>
 		</div>
 		
