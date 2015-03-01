@@ -136,7 +136,7 @@
 			var str=new Array();
 			function saveInArray()
 			{
-					var window.untranslated = articleArray[index - 1];
+					var untranslated = articleArray[index - 1];
 					str.push(untranslated);
 					appendTable();
 			}
@@ -148,7 +148,7 @@
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(1);
 
-			cell1.innerHTML = untranslated;
+			cell1.innerHTML = str[str.length - 1];
 			cell2.innerHTML = translate();
 			};
 			
