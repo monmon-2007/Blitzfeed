@@ -51,12 +51,12 @@ def showNews(link):
 	
 @app.route('/ajax/translate', methods=['GET'])
 def translate():
-    if 'untransalted' in request.args:
+    if 'untranslated' in request.args:
         gs = goslate.Goslate()
 	
         translated = gs.translate((request.args.get('untranslated')), 'en')
 	
-        return render_template("index.html", translated=translated)
+        return str(translated) 
 
     else: 
         return 'error' 

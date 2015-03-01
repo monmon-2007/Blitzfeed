@@ -17,6 +17,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		
         <!--Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>;
     </head>
 	
     <body>
@@ -154,12 +155,15 @@
 			
 
         // Translate Word 
-        function translate(){ 
-            $.get(getBaseUrl() + "ajax/translate", {
+        function translate(){
+            var untranslated = str[str.length -1];  
+            $.get("http://blitzfeed.me/ajax/translate", {
                 untranslated: untranslated
             }, function(resp) {
-                cell2.innerHTML = "resp"; 
-            }); 
+                var temp = resp
+                console.log(temp);
+                return temp; 
+            });
         }
 		
 		</script>
