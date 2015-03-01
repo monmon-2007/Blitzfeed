@@ -12,13 +12,13 @@ def showNews():
 		if lang == 'en'
 			link = 'http://api.feedzilla.com/v1/categories/26/articles.json'
 		
-		else if lang == 'pl'
+		elif lang == 'pl'
 			link = 'http://api.feedzilla.com/v1/categories/170/articles.json'
 		
-		else if lang == 'es'
+		elif lang == 'es'
 			link = 'http://api.feedzilla.com/v1/categories/115/articles.json'
 			
-		else if lang == 'tr'
+		elif lang == 'tr'
 			link = 'http://api.feedzilla.com/v1/categories/70/articles.json'
 	
     r = requests.get(link) 
