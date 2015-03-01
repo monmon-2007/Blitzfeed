@@ -4,6 +4,8 @@ import string
 
 app = Flask(__name__)
 
+global lang = ""
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
