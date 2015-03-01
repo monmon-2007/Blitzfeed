@@ -133,22 +133,24 @@
 		};
 		
 		//Append table.
-			function appendTable(){
+		function appendTable(){
 			var table = document.getElementById("brotable");
 			var row = table.insertRow(0);
 			
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(1);
 			
-			cell1.innerHTML = articleArray[index - 1];
-			cell2.innerHTML = "Translation";
+			var untranslated = articleArray[index - 1];
+			cell1.innerHTML = untranslated;
+			cell2.innerHTML = {{ translated }};
 			};
+		
 		</script>
 		
 		</br></br></br></br></br></br>
 		
 		<div id = "dict">
-			<button id = "addButton" onClick = "appendTable()">Add</button>
+			<button id = "addButton" onClick = "appendTable()" name = "upward" action = "translate" method = 'POST'>Add</button>
 			<table id = 'brotable'></table>
 		</div>
 		

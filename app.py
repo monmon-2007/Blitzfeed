@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
-        lang = request.form['lang']
+        global lang = request.form['lang']
         if lang == 'en':
             link = 'http://api.feedzilla.com/v1/categories/26/articles.json'
 		
@@ -46,7 +46,17 @@ def showNews(link):
         
         i+= 1 
     
-    return final_list 
+    return final_list
+	
+@app.route('/translate', methods=['GET', 'POST'])
+def translate():
+	word = request.form['untranslated']
+	gs = goslate.Goslate()
+	
+	translated = gs.translate(word, lang)
+	
+	return render_template("index.html", translated=translated)
+
       
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=80)
