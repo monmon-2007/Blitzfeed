@@ -9,16 +9,16 @@ def showNews():
 	link = 'http://api.feedzilla.com/v1/categories/26/articles.json'
 	
 	if request.method == 'POST':
-		if lang == 'en'
+		if lang == 'en':
 			link = 'http://api.feedzilla.com/v1/categories/26/articles.json'
 		
-		elif lang == 'pl'
+		elif lang == 'pl':
 			link = 'http://api.feedzilla.com/v1/categories/170/articles.json'
 		
-		elif lang == 'es'
+		elif lang == 'es':
 			link = 'http://api.feedzilla.com/v1/categories/115/articles.json'
 			
-		elif lang == 'tr'
+		elif lang == 'tr':
 			link = 'http://api.feedzilla.com/v1/categories/70/articles.json'
 	
     r = requests.get(link) 
