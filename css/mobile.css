@@ -1,0 +1,119 @@
+/*Copyright 2014 by Jonathan Tan. All rights reserved.*/
+
+/*Global style*/
+* {
+    background-color: #230A3A;
+    font-family: Arial;
+    color: #FFFFFF;
+}
+
+/*Header (Language Bar) style*/
+#header{
+    margin-top: auto;
+    position: absolute;
+    clear: both;
+    top: 0;
+    width: 98%;
+}
+
+/*Language bar text style*/
+#languageBar{
+    text-align: right;
+    font-size: .75em;
+}
+
+/*Table style*/
+table{
+    margin-top: 20%;
+    margin-left: 2%;
+}
+
+/*Div styles*/
+div div{
+	margin-left: auto;
+    margin-right: auto;
+}
+
+/*Name Section style*/
+#nameTD{
+	margin-top: 50px;
+    width: 280px;
+}
+
+/*Menu List style*/
+#listTD{
+	/*margin-top: 50px;*/
+    width: 280px;
+}
+
+/*Table division 1 style*/
+#bodyP1{
+	margin-top: 50px;
+    width: 280px;
+}
+
+/*Table division 2 style*/
+#bodyP2{
+	margin-top: 50px;
+    width: 280px;
+}
+
+/*Menu icon style*/
+.icon{
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+
+/*Link style*/
+a{
+    text-decoration: none;
+}
+
+/*Link hover style*/
+a:hover{
+    color: #FFA500;
+}
+
+/*List elements style*/
+li{
+    padding: 3px;
+    font-size: 1em;
+}
+
+/*Word Display*/
+#currentWord{
+	text-align: center;
+	font-size: 11em;
+}
+
+/*Menu list style*/
+#menu{
+    list-style: none;
+}
+
+/*Normal list element style*/
+.listNorm{
+   list-style: circle;
+}
+
+/*Highlighted text style*/
+.highlight{
+    color: #FFA500;
+}
+
+/*Footer style*/
+#footer{
+    margin-bottom: auto;
+    position: fixed;
+    clear: both;
+    bottom: 0;
+    width: 98%;
+}
+
+/*Footer text (Copyright) style*/
+#copyright{
+    font-size: 10px;
+    text-align: right;
+    position: relative;
+}

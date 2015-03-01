@@ -1,0 +1,88 @@
+/*Copyright 2014 by Jonathan Tan. All rights reserved.*/
+
+/*Global style*/
+* {
+    background-color: #230A3A;
+    font-family: Arial;
+    color: #FFFFFF;
+}
+
+/*Header (Language Bar) style*/
+#header{
+    margin-top: auto;
+    position: absolute;
+    clear: both;
+    top: 0;
+    width: 98%;
+}
+
+/*Menu icon style*/
+.icon{
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+
+/*Link style*/
+a{
+    text-decoration: none;
+}
+
+/*Link hover style*/
+a:hover{
+    color: #FFA500;
+}
+
+/*List elements style*/
+li{
+    padding: 3px;
+    font-size: 1em;
+}
+
+/*Menu list style*/
+#menu{
+    list-style: none;
+}
+
+/*Normal list element style*/
+.listNorm{
+   list-style: circle;
+}
+
+/*Highlighted text style*/
+.highlight{
+    color: #FFA500;
+}
+
+/*Word Display*/
+#currentWord{
+	text-align: center;
+	font-size: 11em;
+}
+#rightWord{
+	padding-right: 5px;
+	font-size: 2em;
+	float: right;
+}
+#leftWord{
+	padding-left: 5px;
+	font-size: 2em;
+	float: left;
+}
+
+
+/*Footer style*/
+#footer{
+    margin-bottom: auto;
+    position: absolute;
+    clear: both;
+    bottom: 0;
+    width: 98%;
+}
+
+/*Footer text (Copyright) style*/
+#copyright{
+    font-size: 10px;
+    text-align: right;
+    position: relative;
+}
