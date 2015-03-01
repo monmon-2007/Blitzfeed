@@ -20,9 +20,9 @@ def showNews():
 			
 		elif lang == 'tr':
 			link = 'http://api.feedzilla.com/v1/categories/70/articles.json'
+
+	r = requests.get(link)
 	
-    r = requests.get(link) 
-    
     raw_list = [] 
     final_list = [] 
     i = 0 
