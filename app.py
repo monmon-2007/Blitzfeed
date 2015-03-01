@@ -1,15 +1,14 @@
 from flask import *
 import requests 
 import string
+import goslate 
 
 app = Flask(__name__)
-
-global lang = ""
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
-        global lang = request.form['lang']
+        lang = request.form['lang']
         if lang == 'en':
             link = 'http://api.feedzilla.com/v1/categories/26/articles.json'
 		
@@ -50,15 +49,17 @@ def showNews(link):
     
     return final_list
 	
-@app.route('/translate', methods=['GET', 'POST'])
+@app.route('/ajax/translate', methods=['GET'])
 def translate():
-	word = request.form['untranslated']
-	gs = goslate.Goslate()
+    if 'untransalted' in request.args:
+        gs = goslate.Goslate()
 	
-	translated = gs.translate(word, lang)
+        translated = gs.translate((request.args.get('untranslated')), 'en')
 	
-	return render_template("index.html", translated=translated)
+        return render_template("index.html", translated=translated)
 
+    else: 
+        return 'error' 
       
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True, port=80)

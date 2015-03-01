@@ -16,7 +16,7 @@
 		
 		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		
-		<!--Scripts-->
+        <!--Scripts-->
     </head>
 	
     <body>
@@ -142,15 +142,23 @@
 			
 			var untranslated = articleArray[index - 1];
 			cell1.innerHTML = untranslated;
-			cell2.innerHTML = {{ translated }};
 			};
+
+        // Translate Word 
+        function translate(){ 
+            $.get(getBaseUrl() + "ajax/translate", {
+                untranslated: untranslated
+            }, function(resp) {
+                cell2.innerHTML = "resp"; 
+            }); 
+        }
 		
 		</script>
 		
 		</br></br></br></br></br></br>
 		
 		<div id = "dict">
-			<button id = "addButton" onClick = "appendTable()" name = "upward" action = "translate" method = 'POST'>Add</button>
+			<button id = "addButton" onClick = "appendTable();translate();" name = "upward">Add</button>
 			<table id = 'brotable'></table>
 		</div>
 		
