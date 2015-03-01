@@ -1,4 +1,4 @@
-var number = 0;
+var index = 0;
 var milliseconds = 1000;
 var wpm = 60;
 
@@ -17,7 +17,7 @@ var timer = setInterval(function(){displayArticle()}, milliseconds);
 console.log(wpm);
 
 displayArticle = function () {
-	if(articleArray[number] == null){
+	if(articleArray[index] == null){
 		clearInterval(timer);
 		address.innerHTML = "Next >";
 		right.innerHTML = "...";
@@ -26,26 +26,26 @@ displayArticle = function () {
 	}
 	var leftWord;
 	
-		if(articleArray[number - 1] == null)
+		if(articleArray[index - 1] == null)
 			leftWord = "...";
 		else
-			leftWord = articleArray[number - 1];
+			leftWord = articleArray[index - 1];
 	
 	left.innerHTML = leftWord;
-	address.innerHTML = articleArray[number];
+	address.innerHTML = articleArray[index];
 	
 	var rightWord;
 	
-		if(articleArray[number + 1] == null)
+		if(articleArray[index + 1] == null)
 			rightWord = "...";
 		else
-			rightWord = articleArray[number + 1];
+			rightWord = articleArray[index + 1];
 	right.innerHTML = rightWord;
-	++number;
+	++index;
 }
 
 //Speed Selection
- function speed(){
+ function changeSpeed(){
 	var myList=document.getElementById("myList");
 	var x = document.getElementById("myList").selectedIndex;
 	var y = document.getElementById("myList").options;

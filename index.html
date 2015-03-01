@@ -23,9 +23,9 @@
 	
 		<div id="header">
 			Marathon
-			<form>
-            Select your speed:
-            <select  id="myList" onchange = speed()>
+			<form class = "menu">
+            Select Speed:
+            <select  id="myList" onchange = changeSpeed()>
                 <option>Beginner - 60 wpm</option>
                 <option>Intermediate - 200 wpm</option>
                 <option>Advanced - 350 wpm</option>
@@ -33,7 +33,18 @@
             </select>
             
          </form>
+		 <form class = "menu">
+            Select Language:
+            <select  id="myList" onchange = changeLanguage()>
+                <option>English</option>
+                <option>Español</option>
+                <option>Français</option>
+                <option>Deutsch</option>
+            </select>
+            
+         </form>
 		</div>
+		
 		</br></br></br></br></br></br></br></br></br></br></br></br>
 	
 		<div id="textDiv"><div id="leftWord">...</div><div id="currentWord"></div><div id="rightWord">...</div></div>

@@ -7,7 +7,7 @@
 	background-color: black;
 	background-repeat: repeat;
     font-family: 'Lato', Arial;
-    color: black;
+    color: #A52A2A;
 }
 
 /*Header (Language Bar) style*/
@@ -43,8 +43,8 @@ li{
 }
 
 /*Menu list style*/
-#menu{
-    list-style: none;
+.menu{
+    background-color: white;
 }
 
 /*Normal list element style*/
