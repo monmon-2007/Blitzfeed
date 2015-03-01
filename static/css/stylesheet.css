@@ -26,9 +26,15 @@
     vertical-align: middle;
 }
 
-/*Link style*/
-a{
-    text-decoration: none;
+/*Table Settings*/
+td{
+    align: center;
+}
+
+#brotable{
+	align: center;
+	width: auto;
+	margin: 0 auto 1em;
 }
 
 /*Link hover style*/
@@ -55,6 +61,15 @@ li{
 /*Highlighted text style*/
 .highlight{
     color: #FFA500;
+}
+
+/*Dictionary*/
+#dict{
+	width: 98%;
+	margin: auto;
+	float: left;
+	text-align: center;
+	align: center;
 }
 
 /*Word Display*/

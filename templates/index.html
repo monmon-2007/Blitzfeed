@@ -86,48 +86,74 @@
 	
 		var rightWord;
 	
-		if(articleArray[index + 1] == null)
+		if(articleArray[index + 1] == null){
+			document.getElementById("addButton").disabled = true;
 			rightWord = "...";
+		}
 		else
 			rightWord = articleArray[index + 1];
 		right.innerHTML = rightWord;
-		++index;
+		index++;
 		}
 
-//Speed Selection
- function changeSpeed(){
-	var myList=document.getElementById("myList");
-	var x = document.getElementById("myList").selectedIndex;
-	var y = document.getElementById("myList").options;
-	index = y[x].index;
-	if (index == 0){
-		setWPM(60);
-        return;
-    }
-    else if (index == 1){
-		setWPM(200);
-        return;
-    }
-    else if (index == 2){
-		console.log("2");
-		setWPM(350);
-		return;
-    }
-    else if (index == 3){
-		setWPM(500);
-		return;
-    }
-}
+		//Speed Selection
+		function changeSpeed(){
+			var myList=document.getElementById("myList");
+			var x = document.getElementById("myList").selectedIndex;
+			var y = document.getElementById("myList").options;
+			index = y[x].index;
+			if (index == 0){
+				setWPM(60);
+				return;
+			}
+			else if (index == 1){
+				setWPM(200);
+				return;
+			}
+			else if (index == 2){
+				console.log("2");
+				setWPM(350);
+				return;
+			}
+			else if (index == 3){
+				setWPM(500);
+				return;
+			}
+		}
 
-function setWPM(wpmArg){
-	wpm = wpmArg;
-	console.log("Wpm: " + wpm);
-	milliseconds = (60000 / wpm);
-	console.log(milliseconds);
+		//Change WPM variables
+		function setWPM(wpmArg){
+			wpm = wpmArg;
+			console.log("Wpm: " + wpm);
+			milliseconds = (60000 / wpm);
+			console.log(milliseconds);
 	
-	clearInterval(timer);
-	timer = setInterval(function(){displayArticle()}, milliseconds);
-};
+			clearInterval(timer);
+			timer = setInterval(function(){displayArticle()}, milliseconds);
+		};
+		
+		//Append table.
+			function appendTable(){
+			var table = document.getElementById("brotable");
+			var row = table.insertRow(0);
+			
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			
+			cell1.innerHTML = articleArray[index];
+			cell2.innerHTML = "Translation";
+			};
+		</script>
+		
+		</br></br></br></br></br></br>
+		
+		<div id = "dict">
+			<button id = "addButton" onClick = "appendTable()">Add</button>
+			<table id = 'brotable'></table>
+		</div>
+		
+		<script>
+			
 		</script>
 		
 		<!--Footer-->
