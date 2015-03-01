@@ -2,9 +2,12 @@
 
 /*Global style*/
 * {
-    background-color: #230A3A;
-    font-family: Arial;
-    color: #FFFFFF;
+    background-image: url("../graphics/food.png");
+	/* Background pattern from subtlepatterns.com */
+	background-color: black;
+	background-repeat: repeat;
+    font-family: 'Lato', Arial;
+    color: #A52A2A;
 }
 
 /*Header (Language Bar) style*/

@@ -2,8 +2,8 @@
 
 /*Global style*/
 * {
-    background-image	/* Background pattern from subtlepatterns.com */
-: url("../graphics/food.png");
+    background-image: url("../graphics/food.png");
+	/* Background pattern from subtlepatterns.com */
 	background-color: black;
 	background-repeat: repeat;
     font-family: 'Lato', Arial;

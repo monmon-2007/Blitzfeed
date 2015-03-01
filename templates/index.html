@@ -58,7 +58,9 @@
 		var left = document.getElementById("leftWord");
 		var address = document.getElementById("currentWord");
 
-		var article = ({{news}});
+		var article = ({{ news|tojson }});
+		
+		console.log(article);
 
 		var articleArray = article.split(" ");
 
