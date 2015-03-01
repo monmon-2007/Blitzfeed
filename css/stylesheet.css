@@ -2,9 +2,12 @@
 
 /*Global style*/
 * {
-    background-color: #230A3A;
-    font-family: Arial;
-    color: #FFFFFF;
+    background-image	/* Background pattern from subtlepatterns.com */
+: url("../graphics/food.png");
+	background-color: black;
+	background-repeat: repeat;
+    font-family: 'Lato', Arial;
+    color: black;
 }
 
 /*Header (Language Bar) style*/
@@ -61,21 +64,20 @@ li{
 
 #currentWord{
 	text-align: center;
-	font-size: 11em;
-	width: 85%;
+	font-size: 8em;
+	width: 76%;
+	float: left;
 }
 #rightWord{
-	padding-right: 5px;
 	font-size: 2em;
-	float: right;
-	width: 10%;
+	float: left;
+	width: 12%;
 	text-align: right;
 }
 #leftWord{
-	padding-left: 5px;
 	font-size: 2em;
 	float: left;
-	width: 10%;
+	width: 12%;
 	text-align: left;
 }
 

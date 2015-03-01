@@ -84,7 +84,20 @@ li{
 /*Word Display*/
 #currentWord{
 	text-align: center;
-	font-size: 11em;
+	font-size: 9em;
+	width: 85%;
+}
+#rightWord{
+	padding-right: 5px;
+	font-size: 2em;
+	width: 10%;
+	text-align: right;
+}
+#leftWord{
+	padding-left: 5px;
+	font-size: 2em;
+	width: 10%;
+	text-align: left;
 }
 
 /*Menu list style*/
