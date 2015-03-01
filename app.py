@@ -4,9 +4,24 @@ import string
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def showNews():
-    r = requests.get('http://api.feedzilla.com/v1/categories/26/articles.json') 
+	link = 'http://api.feedzilla.com/v1/categories/26/articles.json'
+	
+	if request.method == 'POST':
+		if lang == en
+			link = 'http://api.feedzilla.com/v1/categories/26/articles.json'
+		
+		else if lang == pl
+			link = 'http://api.feedzilla.com/v1/categories/170/articles.json'
+		
+		else if lang == es
+			link = 'http://api.feedzilla.com/v1/categories/115/articles.json'
+			
+		else if lang == tr
+			link = 'http://api.feedzilla.com/v1/categories/70/articles.json'
+	
+    r = requests.get(link) 
     
     raw_list = [] 
     final_list = [] 
@@ -19,7 +34,8 @@ def showNews():
         for word in raw_list[i]:
             final_list.append(word)
         
-        i+= 1            
+        i+= 1
+			
 
     return render_template('index.html', news=final_list)
 
