@@ -58,12 +58,8 @@
 		var left = document.getElementById("leftWord");
 		var address = document.getElementById("currentWord");
 
-		var article = ({{ news|tojson }});
+		var articleArray = {{ news|tojson }};
 		
-		console.log(article);
-
-		var articleArray = article.split(" ");
-
 		address.innerHTML = "Start >";
 
 		var timer = setInterval(function(){displayArticle()}, milliseconds);

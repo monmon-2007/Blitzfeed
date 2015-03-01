@@ -5,18 +5,23 @@ import string
 app = Flask(__name__)
 
 @app.route('/')
-def home():
-    return render_template('index.html')
-
 def showNews():
     r = requests.get('http://api.feedzilla.com/v1/categories/26/articles.json') 
     
-    news = [] 
+    raw_list = [] 
+    final_list = [] 
+    i = 0 
 
-    for a in r.json()['articles']:
-        news.append(a['summary'])        
+    for article in r.json()['articles']:
+        raw_list.append(article['summary'].split())
+    
+    while len(raw_list) > i: 
+        for word in raw_list[i]:
+            final_list.append(word)
+        
+        i+= 1            
 
-    return render_template('index.html', news=news)
+    return render_template('index.html', news=final_list)
 
 
 if __name__ == '__main__':
