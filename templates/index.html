@@ -8,8 +8,8 @@
         <title>Marathon</title>
         
         <!--CSS Stylesheet-->
-        <link rel='stylesheet' media='screen and (min-width: 1200px)' href='/static/css/stylesheet.css'/>
-        <link rel='stylesheet' media='screen and (max-width: 1199px)'href='/static/css/mobile.css' />
+        <link rel='stylesheet' media='screen and (min-width: 1200px)' href='../static/css/stylesheet.css'/>
+        <link rel='stylesheet' media='screen and (max-width: 1199px)'href='../static/css/mobile.css' />
         
         <!--Declare utilizaton of UTF-8-->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -49,7 +49,88 @@
 	
 		<div id="textDiv"><div id="leftWord">...</div><div id="currentWord"></div><div id="rightWord">...</div></div>
 		
-		<script src="/static/scripts/test.js" type = "text/javascript"></script>
+		<script type = "text/javascript">
+		var index = 0;
+		var milliseconds = 1000;
+		var wpm = 60;
+
+		var right = document.getElementById("rightWord");
+		var left = document.getElementById("leftWord");
+		var address = document.getElementById("currentWord");
+
+		var article = ({{news}});
+
+		var articleArray = article.split(" ");
+
+		address.innerHTML = "Start >";
+
+		var timer = setInterval(function(){displayArticle()}, milliseconds);
+
+		console.log(wpm);
+
+		displayArticle = function () {
+			if(articleArray[index] == null){
+				clearInterval(timer);
+				address.innerHTML = "Next >";
+				right.innerHTML = "...";
+				left.innerHTML = "...";
+			return;
+		}
+		var leftWord;
+	
+		if(articleArray[index - 1] == null)
+			leftWord = "...";
+		else
+			leftWord = articleArray[index - 1];
+	
+		left.innerHTML = leftWord;
+		address.innerHTML = articleArray[index];
+	
+		var rightWord;
+	
+		if(articleArray[index + 1] == null)
+			rightWord = "...";
+		else
+			rightWord = articleArray[index + 1];
+		right.innerHTML = rightWord;
+		++index;
+		}
+
+//Speed Selection
+ function changeSpeed(){
+	var myList=document.getElementById("myList");
+	var x = document.getElementById("myList").selectedIndex;
+	var y = document.getElementById("myList").options;
+	index = y[x].index;
+	if (index == 0){
+		setWPM(60);
+        return;
+    }
+    else if (index == 1){
+		setWPM(200);
+        return;
+    }
+    else if (index == 2){
+		console.log("2");
+		setWPM(350);
+		return;
+    }
+    else if (index == 3){
+		setWPM(500);
+		return;
+    }
+}
+
+function setWPM(wpmArg){
+	wpm = wpmArg;
+	console.log("Wpm: " + wpm);
+	milliseconds = (60000 / wpm);
+	console.log(milliseconds);
+	
+	clearInterval(timer);
+	timer = setInterval(function(){displayArticle()}, milliseconds);
+};
+		</script>
 		
 		<!--Footer-->
         <div id="footer"><p id="copyright">&copy 2014 by J.T. A.M. M.G. All rights reserved.</p></div>
