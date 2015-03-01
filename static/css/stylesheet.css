@@ -39,7 +39,7 @@ td{
 
 /*Link hover style*/
 a:hover{
-    color: #FFA500;
+    color: black;
 }
 
 /*List elements style*/
@@ -56,11 +56,6 @@ li{
 /*Normal list element style*/
 .listNorm{
    list-style: circle;
-}
-
-/*Highlighted text style*/
-.highlight{
-    color: #FFA500;
 }
 
 /*Dictionary*/
@@ -108,7 +103,17 @@ li{
 
 /*Footer text (Copyright) style*/
 #copyright{
+	width: 20%;
     font-size: 10px;
     text-align: right;
     position: relative;
+	float: right;
+}
+
+#links{
+	width: 20%;
+    font-size: 10px;
+    text-align: left;
+    position: relative;
+	float: left;
 }
