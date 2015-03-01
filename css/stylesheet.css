@@ -55,19 +55,28 @@ li{
 }
 
 /*Word Display*/
+#textDiv{
+	clear:both;
+}
+
 #currentWord{
 	text-align: center;
 	font-size: 11em;
+	width: 85%;
 }
 #rightWord{
 	padding-right: 5px;
 	font-size: 2em;
 	float: right;
+	width: 10%;
+	text-align: right;
 }
 #leftWord{
 	padding-left: 5px;
 	font-size: 2em;
 	float: left;
+	width: 10%;
+	text-align: left;
 }
 
 
