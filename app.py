@@ -1,6 +1,6 @@
 from flask import *
 import requests 
-import string 
+import string
 
 app = Flask(__name__)
 

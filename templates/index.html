@@ -5,7 +5,7 @@
 		<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
 		
         <!--Page Title-->
-        <title>Marathon</title>
+        <title>BlitzFeed</title>
         
         <!--CSS Stylesheet-->
         <link rel='stylesheet' media='screen and (min-width: 1200px)' href='../static/css/stylesheet.css'/>
@@ -22,7 +22,7 @@
     <body>
 	
 		<div id="header">
-			Marathon
+			BlitzFeed
 			<form class = "menu">
             Select Speed:
             <select  id="myList" onchange = changeSpeed()>
@@ -140,7 +140,7 @@
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(1);
 			
-			cell1.innerHTML = articleArray[index];
+			cell1.innerHTML = articleArray[index - 1];
 			cell2.innerHTML = "Translation";
 			};
 		</script>
